@@ -6,7 +6,7 @@
 /*   By: dcaetano <dcaetano@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/27 22:56:47 by dcaetano          #+#    #+#             */
-/*   Updated: 2024/04/29 09:33:16 by dcaetano         ###   ########.fr       */
+/*   Updated: 2025/02/14 16:06:46 by dcaetano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,8 +88,8 @@ int	ft_getline(char **buff, char **line)
 	{
 		if ((*buff)[i] == '\n')
 		{
-			newbuf = ft_calloc(1, sizeof(*newbuf) * \
-				(ft_strlen(*buff + i + 1) + 1));
+			newbuf = ft_calloc(1, sizeof(*newbuf) * (ft_strlen(*buff + i + 1)
+						+ 1));
 			if (newbuf == 0)
 				return (-1);
 			ft_strlcpy(newbuf, *buff + i + 1, (ft_strlen(*buff + i + 1)));

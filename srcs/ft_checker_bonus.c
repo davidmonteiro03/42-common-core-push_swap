@@ -6,7 +6,7 @@
 /*   By: dcaetano <dcaetano@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/27 21:52:57 by dcaetano          #+#    #+#             */
-/*   Updated: 2024/04/29 09:33:19 by dcaetano         ###   ########.fr       */
+/*   Updated: 2025/02/14 16:06:41 by dcaetano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,8 @@ void	ft_error_bonus(t_check *check, t_list **list_a, t_list **list_b)
 	ft_error();
 }
 
-void	ft_display_stacks(t_list **list_a, t_list **list_b, bool has_flag, \
-	int original_size)
+void	ft_display_stacks(t_list **list_a, t_list **list_b, bool has_flag,
+		int original_size)
 {
 	if (has_flag == false)
 		return ;
@@ -57,8 +57,8 @@ void	ft_putstacks(t_list *list_a, t_list *list_b, int original_size)
 	}
 }
 
-void	ft_checker_bonus(t_check *check, t_list **list_a, \
-	t_list **list_b, bool has_flag)
+void	ft_checker_bonus(t_check *check, t_list **list_a, t_list **list_b,
+		bool has_flag)
 {
 	ft_display_stacks(list_a, list_b, has_flag, check->original_size);
 	check->buffer = ft_strdup("");

@@ -6,7 +6,7 @@
 /*   By: dcaetano <dcaetano@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/27 19:02:00 by dcaetano          #+#    #+#             */
-/*   Updated: 2024/04/27 20:23:52 by dcaetano         ###   ########.fr       */
+/*   Updated: 2025/02/14 16:11:00 by dcaetano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ void	ft_setmoves_ultimate(t_rotate *rot, int *rotate)
 			rotate[RRB]--;
 		}
 	}
-	if (rotate[RA] + rotate[RB] + rotate[RRA] + rotate[RRB] + rotate[RR] \
-		+ rotate[RRR] < rot->ops[RA] + rot->ops[RB] + rot->ops[RRA] \
+	if (rotate[RA] + rotate[RB] + rotate[RRA] + rotate[RRB] + rotate[RR]
+		+ rotate[RRR] < rot->ops[RA] + rot->ops[RB] + rot->ops[RRA]
 		+ rot->ops[RRB] + rot->ops[RRR] + rot->ops[RR])
 	{
 		rot->ops[RA] = rotate[RA];

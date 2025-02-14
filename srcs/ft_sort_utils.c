@@ -6,7 +6,7 @@
 /*   By: dcaetano <dcaetano@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 16:40:00 by dcaetano          #+#    #+#             */
-/*   Updated: 2024/04/27 19:17:04 by dcaetano         ###   ########.fr       */
+/*   Updated: 2025/02/14 16:10:43 by dcaetano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,8 +42,8 @@ void	ft_set_targets_b(t_list **list_a, t_list **list_b)
 		((t_element *)(temp_a->content))->target = INT_MIN;
 		while (temp_b != NULL)
 		{
-			if (ft_smaller(temp_b->content, temp_a->content, 0) == true && \
-				ft_greater(temp_b->content, temp_a->content, 2) == true)
+			if (ft_smaller(temp_b->content, temp_a->content, 0) == true
+				&& ft_greater(temp_b->content, temp_a->content, 2) == true)
 				((t_element *)(temp_a->content))->target = \
 				((t_element *)(temp_b->content))->number;
 			temp_b = temp_b->next;
@@ -69,8 +69,8 @@ void	ft_set_targets_a(t_list **list_a, t_list **list_b)
 		((t_element *)(temp_b->content))->target = INT_MAX;
 		while (temp_a != NULL)
 		{
-			if (ft_greater(temp_a->content, temp_b->content, 0) == true && \
-				ft_smaller(temp_a->content, temp_b->content, 2) == true)
+			if (ft_greater(temp_a->content, temp_b->content, 0) == true
+				&& ft_smaller(temp_a->content, temp_b->content, 2) == true)
 				((t_element *)(temp_b->content))->target = \
 				((t_element *)(temp_a->content))->number;
 			temp_a = temp_a->next;

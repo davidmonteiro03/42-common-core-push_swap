@@ -6,7 +6,7 @@
 /*   By: dcaetano <dcaetano@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 16:48:40 by dcaetano          #+#    #+#             */
-/*   Updated: 2024/04/27 22:31:28 by dcaetano         ###   ########.fr       */
+/*   Updated: 2025/02/14 16:11:47 by dcaetano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,13 +22,13 @@ void	ft_sort3(t_list **list_a)
 	min = ft_gettarget(*list_a, &ft_smaller);
 	max = ft_gettarget(*list_a, &ft_greater);
 	if (*list_a == min)
-		return (ft_execute("rra", list_a, NULL, true), \
-				ft_execute("sa", list_a, NULL, true), (void)0);
+		return (ft_execute("rra", list_a, NULL, true), ft_execute("sa", list_a,
+				NULL, true), (void)0);
 	if (*list_a == max)
 	{
 		ft_execute("ra", list_a, NULL, true);
-		if (ft_smaller((*list_a)->content, (*list_a)->next->content, \
-			false) == false)
+		if (ft_smaller((*list_a)->content, (*list_a)->next->content,
+				false) == false)
 			ft_execute("sa", list_a, NULL, true);
 		return ;
 	}
@@ -53,8 +53,8 @@ void	ft_sort4_5(t_list **list_a, t_list **list_b)
 		ft_execute("pb", list_a, list_b, true);
 	}
 	ft_sort3(list_a);
-	if (*list_b != NULL && (*list_b)->next != NULL && \
-		ft_smaller((*list_b)->content, (*list_b)->next->content, 0) == true)
+	if (*list_b != NULL && (*list_b)->next != NULL
+		&& ft_smaller((*list_b)->content, (*list_b)->next->content, 0) == true)
 		ft_execute("sb", list_a, list_b, true);
 	while (ft_lstsize(*list_b) > 0)
 		ft_execute("pa", list_a, list_b, true);

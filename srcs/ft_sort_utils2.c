@@ -6,7 +6,7 @@
 /*   By: dcaetano <dcaetano@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/27 17:24:32 by dcaetano          #+#    #+#             */
-/*   Updated: 2024/04/27 19:05:09 by dcaetano         ###   ########.fr       */
+/*   Updated: 2025/02/14 16:10:49 by dcaetano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,8 @@ bool	ft_issorted(t_list *list)
 	return (true);
 }
 
-void	ft_optimize_moves_a(t_list **list_a, t_list **list_b, \
-	t_rotate *rot, t_list *node)
+void	ft_optimize_moves_a(t_list **list_a, t_list **list_b, t_rotate *rot,
+		t_list *node)
 {
 	int		i;
 	int		rotate[6];
@@ -55,8 +55,8 @@ void	ft_optimize_moves_a(t_list **list_a, t_list **list_b, \
 	return (ft_setmoves(rot, rotate, false));
 }
 
-void	ft_optimize_moves_b(t_list **list_a, t_list **list_b, \
-	t_rotate *rot, t_list *node)
+void	ft_optimize_moves_b(t_list **list_a, t_list **list_b, t_rotate *rot,
+		t_list *node)
 {
 	int		i;
 	int		rotate[6];
@@ -85,8 +85,7 @@ void	ft_optimize_moves_b(t_list **list_a, t_list **list_b, \
 	return (ft_setmoves(rot, rotate, false));
 }
 
-void	ft_optimize(t_list **list_a, t_list **list_b, \
-	t_rotate *rot, bool pos)
+void	ft_optimize(t_list **list_a, t_list **list_b, t_rotate *rot, bool pos)
 {
 	t_list	*temp;
 
